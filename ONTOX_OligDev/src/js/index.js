@@ -1,5 +1,5 @@
 /**
- * KE Methods Mapper Plugin for Minerva v18
+ * Neurotox Data Mapper Plugin for Minerva v18
  * Author: Luiz Ladeira & Hesam Korki
  *
  * Loads a Google Sheet with KE data, renders a searchable table,
@@ -12,12 +12,12 @@ require("./minervaAPI");
 
 /* globals minerva:MinervaAPI */
 
-const PLUGIN_NAME = "Nephrotox KE Mapper";
+const PLUGIN_NAME = "Neurotox Data Mapper";
 const PLUGIN_VERSION = "1.1.0";
 const PLUGIN_URL =
-  "https://raw.githubusercontent.com/luiz-ladeira/cardiotox_aop_minerva_plugin/master/plugin.js";
+  "https://raw.githubusercontent.com/ontox-maps/minerva_plugins/master/ONTOX_OligDev/plugin.js";
 
-const SPREADSHEET_ID = "1QA4EHdprLo3JCTRzE2U6E3DwBj-wYiwLTN-gc2eI7Hs";
+const SPREADSHEET_ID = "1vF6tjvZdAThAq9NRxirWmjdL7ouFu3MNWkG6CGqdMfg";
 const API_KEY = "AIzaSyAIaStdq_ebxgOE7l5K5mBrBSRrf3Ywayg";
 const SPREADSHEET_URL = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}`;
 

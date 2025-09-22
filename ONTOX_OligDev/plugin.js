@@ -41,7 +41,7 @@ function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Sym
 function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 /**
- * KE Methods Mapper Plugin for Minerva v18
+ * Neurotox Data Mapper Plugin for Minerva v18
  * Author: Luiz Ladeira & Hesam Korki
  *
  * Loads a Google Sheet with KE data, renders a searchable table,
@@ -54,10 +54,10 @@ require("./minervaAPI");
 
 /* globals minerva:MinervaAPI */
 
-var PLUGIN_NAME = "Nephrotox KE Mapper";
+var PLUGIN_NAME = "Neurotox Data Mapper";
 var PLUGIN_VERSION = "1.1.0";
-var PLUGIN_URL = "https://raw.githubusercontent.com/luiz-ladeira/cardiotox_aop_minerva_plugin/master/plugin.js";
-var SPREADSHEET_ID = "1QA4EHdprLo3JCTRzE2U6E3DwBj-wYiwLTN-gc2eI7Hs";
+var PLUGIN_URL = "https://raw.githubusercontent.com/ontox-maps/minerva_plugins/master/ONTOX_OligDev/plugin.js";
+var SPREADSHEET_ID = "1vF6tjvZdAThAq9NRxirWmjdL7ouFu3MNWkG6CGqdMfg";
 var API_KEY = "AIzaSyAIaStdq_ebxgOE7l5K5mBrBSRrf3Ywayg";
 var SPREADSHEET_URL = "https://docs.google.com/spreadsheets/d/".concat(SPREADSHEET_ID);
 var KE_NAME_COLUMN = "Entity";
