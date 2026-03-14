@@ -53,7 +53,7 @@ require("./minervaAPI");
 var PLUGIN_NAME = "Neurotox Data Mapper";
 var PLUGIN_VERSION = "1.2.0";
 var PLUGIN_URL = "https://raw.githubusercontent.com/ontox-maps/minerva_plugins/master/ONTOX_OligDev/plugin.js";
-var SPREADSHEET_ID = "1vF6tjvZdAThAq9NRxirWmjdL7ouFu3MNWkG6CGqdMfg";
+var SPREADSHEET_ID = "1oGgFuRq5oX8q0UxPFz2f-kKgH0pQ_WUPc528atwZG6k";
 var API_KEY = "AIzaSyAIaStdq_ebxgOE7l5K5mBrBSRrf3Ywayg";
 var SPREADSHEET_URL = "https://docs.google.com/spreadsheets/d/".concat(SPREADSHEET_ID);
 var KE_NAME_COLUMN = "Entity";
