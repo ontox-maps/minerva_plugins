@@ -1,6 +1,6 @@
 /**
- * KE Methods Mapper Plugin for Minerva v18
- * Author: Luiz Ladeira
+ * Nephrotox KE Mapper Plugin for Minerva v18
+ * Author: Luiz Ladeira & Hesam Korki
  *
  * Loads a Google Sheet with KE data, renders a searchable table,
  * and highlights corresponding BioEntities in the Minerva map when clicked.
@@ -12,15 +12,16 @@ require("./minervaAPI");
 
 /* globals minerva:MinervaAPI */
 
-const PLUGIN_NAME = "KE Methods Mapper";
-const PLUGIN_VERSION = "1.6.2";
-const PLUGIN_URL = "https://raw.githubusercontent.com/luiz-ladeira/cardiotox_aop_minerva_plugin/master/plugin.js";
+const PLUGIN_NAME = "Nephrotox KE Mapper";
+const PLUGIN_VERSION = "1.2.0";
+const PLUGIN_URL =
+  "https://raw.githubusercontent.com/ontox-maps/minerva_plugins/master/AOP_Nephrotox/plugin.js";
 
-const SPREADSHEET_ID = "1lYtwYLNLfGlhj7gbbkaNCwYNsuGKM5L6uJSydlXEGLE";
+const SPREADSHEET_ID = "1QA4EHdprLo3JCTRzE2U6E3DwBj-wYiwLTN-gc2eI7Hs";
 const API_KEY = "AIzaSyAIaStdq_ebxgOE7l5K5mBrBSRrf3Ywayg";
 const SPREADSHEET_URL = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}`;
 
-const KE_NAME_COLUMN = "ke_name";
+const KE_NAME_COLUMN = "Entity";
 
 // ===== Utils =====
 function normalizeName(name) {
