@@ -17,7 +17,7 @@ const PLUGIN_VERSION = "1.2.0";
 const PLUGIN_URL =
   "https://raw.githubusercontent.com/ontox-maps/minerva_plugins/master/ONTOX_OligDev/plugin.js";
 
-const SPREADSHEET_ID = "1oGgFuRq5oX8q0UxPFz2f-kKgH0pQ_WUPc528atwZG6k";
+const SPREADSHEET_ID = "1vF6tjvZdAThAq9NRxirWmjdL7ouFu3MNWkG6CGqdMfg";
 const API_KEY = "AIzaSyAIaStdq_ebxgOE7l5K5mBrBSRrf3Ywayg";
 const SPREADSHEET_URL = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}`;
 
