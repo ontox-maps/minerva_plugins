@@ -1,5 +1,5 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-var css = "/**\n * KE Methods Mapper Plugin styles\n * Author: Luiz Ladeira\n */\nbody {\n  font-family: Arial, sans-serif;\n  font-size: 14px;\n  line-height: 1.4;\n}\n.table-wrapper {\n  width: 100%;\n  height: 100%;\n  max-height: 500px;\n  overflow-x: auto;\n  overflow-y: auto;\n  border: 1px solid #ddd;\n  background: #fff;\n  padding: 5px;\n}\n.table {\n  width: 100%;\n  border-collapse: collapse;\n}\n.table th,\n.table td {\n  white-space: nowrap;\n  padding: 6px 10px;\n  border: 1px solid #ccc;\n  text-align: left;\n}\n.table th {\n  background: #f8f9fa;\n  position: sticky;\n  top: 0;\n  z-index: 2;\n}\n.table tr:hover {\n  background: #f1f1f1;\n}\n.d-flex {\n  margin-bottom: 8px;\n}\n.access-btn {\n  background-color: #007bff !important;\n  color: white !important;\n  font-weight: normal !important;\n}\n.clean-btn {\n  margin-left: 5px;\n}\n/*# sourceMappingURL=styles.css.map */\n"; (require("browserify-css").createStyle(css, { "href": "__tmp_minerva_plugin\\css\\styles.css" }, { "insertAt": "bottom" })); module.exports = css;
+var css = ".starter-kit-container {\n  padding: 10px;\n  background-color: #bada55;\n  font-size: 0.8rem;\n  height: 100%;\n  overflow: auto;\n}\n.btn-uniprot,\n.btn-pick-random,\n.btn-minerva {\n  margin-bottom: 5px;\n}\n.starter-kit-container .card {\n  position: relative;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-direction: column;\n  flex-direction: column;\n  min-width: 0;\n  word-wrap: break-word;\n  background-color: #fff;\n  background-clip: border-box;\n  border: 1px solid rgba(0, 0, 0, 0.125);\n  border-radius: 0.25rem;\n}\n.starter-kit-container .card-header:first-child {\n  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;\n}\n.starter-kit-container .card-header {\n  padding: 0.75rem 1.25rem;\n  margin-bottom: 0;\n  background-color: rgba(0, 0, 0, 0.03);\n  border-bottom: 1px solid rgba(0, 0, 0, 0.125);\n}\n.starter-kit-container .card-body {\n  -ms-flex: 1 1 auto;\n  flex: 1 1 auto;\n  padding: 1.25rem;\n}\n.starter-kit-container .btn {\n  display: inline-block;\n  font-weight: 400;\n  color: #212529;\n  text-align: center;\n  vertical-align: middle;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  background-color: transparent;\n  border: 1px solid transparent;\n  padding: 0.375rem 0.75rem;\n  font-size: 0.8rem;\n  line-height: 1.5;\n  border-radius: 0.25rem;\n  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;\n}\n.starter-kit-container .btn-primary {\n  color: #fff;\n  background-color: #007bff;\n  border-color: #007bff;\n}\n.starter-kit-container .btn-primary:hover {\n  color: #fff;\n  background-color: #0069d9;\n  border-color: #0062cc;\n}\n.starter-kit-container .btn-block {\n  display: block;\n  width: 100%;\n}\n.starter-kit-container .btn-block + .btn-block {\n  margin-top: 0.5rem;\n}\n.starter-kit-container hr {\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  border: 0;\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n}\n.starter-kit-container .h4,\n.starter-kit-container h4 {\n  font-size: 1.5rem;\n}\n.starter-kit-container pre {\n  overflow-x: auto;\n}\n/*# sourceMappingURL=styles.css.map */\n"; (require("browserify-css").createStyle(css, { "href": "__tmp_minerva_plugin\\css\\styles.css" }, { "insertAt": "bottom" })); module.exports = css;
 },{"browserify-css":4}],2:[function(require,module,exports){
 "use strict";
 
@@ -25,10 +25,6 @@ require("core-js/modules/es.string.replace.js");
 require("core-js/modules/es.string.trim.js");
 require("core-js/modules/web.dom-collections.for-each.js");
 require("core-js/modules/web.dom-collections.iterator.js");
-function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
-function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t.return || t.return(); } finally { if (u) throw o; } } }; }
 function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i.return) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
 function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); } r ? i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n : (o("next", 0), o("throw", 1), o("return", 2)); }, _regeneratorDefine2(e, r, n, t); }
@@ -55,7 +51,7 @@ require("./minervaAPI");
 /* globals minerva:MinervaAPI */
 
 var PLUGIN_NAME = "Neurotox Data Mapper";
-var PLUGIN_VERSION = "1.1.0";
+var PLUGIN_VERSION = "1.2.0";
 var PLUGIN_URL = "https://raw.githubusercontent.com/ontox-maps/minerva_plugins/master/ONTOX_OligDev/plugin.js";
 var SPREADSHEET_ID = "1vF6tjvZdAThAq9NRxirWmjdL7ouFu3MNWkG6CGqdMfg";
 var API_KEY = "AIzaSyAIaStdq_ebxgOE7l5K5mBrBSRrf3Ywayg";
@@ -69,7 +65,8 @@ function normalizeName(name) {
 function buildEntityIndex(bioEntities) {
   var index = {};
   bioEntities.forEach(function (be) {
-    var keys = [normalizeName(be.name)].concat(_toConsumableArray((be.labels || []).map(normalizeName)), _toConsumableArray((be.aliases || []).map(normalizeName)));
+    var entityName = be.name || be.bioEntity && be.bioEntity.name || "";
+    var keys = [normalizeName(entityName)].concat(_toConsumableArray((be.labels || []).map(normalizeName)), _toConsumableArray((be.aliases || []).map(normalizeName)));
     keys.forEach(function (k) {
       if (k) index[k] = be;
     });
@@ -80,58 +77,45 @@ function fetchSheetData() {
   return _fetchSheetData.apply(this, arguments);
 }
 function _fetchSheetData() {
-  _fetchSheetData = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3() {
+  _fetchSheetData = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2() {
     var url, resp;
-    return _regenerator().w(function (_context3) {
-      while (1) switch (_context3.n) {
+    return _regenerator().w(function (_context2) {
+      while (1) switch (_context2.n) {
         case 0:
-          url = "https://sheets.googleapis.com/v4/spreadsheets/".concat(SPREADSHEET_ID, "/values/Sheet1?key=").concat(API_KEY);
-          _context3.n = 1;
+          url = "https://sheets.googleapis.com/v4/spreadsheets/".concat(SPREADSHEET_ID, "/values/Data?key=").concat(API_KEY);
+          _context2.n = 1;
           return fetch(url);
         case 1:
-          resp = _context3.v;
+          resp = _context2.v;
           if (resp.ok) {
-            _context3.n = 2;
+            _context2.n = 2;
             break;
           }
           throw new Error("Google Sheets fetch failed: ".concat(resp.statusText));
         case 2:
-          _context3.n = 3;
+          _context2.n = 3;
           return resp.json();
         case 3:
-          return _context3.a(2, _context3.v);
+          return _context2.a(2, _context2.v);
       }
-    }, _callee3);
+    }, _callee2);
   }));
   return _fetchSheetData.apply(this, arguments);
 }
-function fetchElementDetails(_x) {
-  return _fetchElementDetails.apply(this, arguments);
-}
-function _fetchElementDetails() {
-  _fetchElementDetails = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4(element) {
-    var url;
-    return _regenerator().w(function (_context4) {
-      while (1) switch (_context4.n) {
-        case 0:
-          url = minerva.project.data.getApiUrls().baseNewApiUrl + "/projects/" + minerva.project.data.getProjectId() + "/models/" + element.modelId + "/bioEntities/elements/" + element.id;
-          return _context4.a(2, fetch(url).then(function (r) {
-            return r.json();
-          }));
-      }
-    }, _callee4);
-  }));
-  return _fetchElementDetails.apply(this, arguments);
-}
 function elementToPinData(element) {
+  var geometry = element.bounds ? element.bounds : element;
+  var w = parseFloat(geometry.width) || 0;
+  var h = parseFloat(geometry.height) || 0;
+  var x = parseFloat(geometry.x) || 0;
+  var y = parseFloat(geometry.y) || 0;
   return {
     id: "E" + element.id,
-    modelId: element.modelId ? element.modelId : element.model,
+    modelId: element.modelId || element.model,
     type: "pin",
     color: "#FF0000",
     opacity: 0.9,
-    x: element.x + element.width / 2,
-    y: element.y + element.height / 2
+    x: x + w / 2,
+    y: y + h / 2
   };
 }
 function deHighlightAll() {
@@ -140,87 +124,70 @@ function deHighlightAll() {
     minerva.data.bioEntities.removeAllMarkers();
   }
 }
-
-// ===== Core =====
-function highlightMultiple(_x2) {
+function highlightMultiple(_x) {
   return _highlightMultiple.apply(this, arguments);
 }
 /**
  * Render KE table
  */
 function _highlightMultiple() {
-  _highlightMultiple = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee5(matches) {
-    var _iterator, _step, m, full, marker, _t, _t2;
-    return _regenerator().w(function (_context5) {
-      while (1) switch (_context5.p = _context5.n) {
+  _highlightMultiple = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3(matches) {
+    var _iterator, _step, m, marker;
+    return _regenerator().w(function (_context3) {
+      while (1) switch (_context3.n) {
         case 0:
           deHighlightAll();
           _iterator = _createForOfIteratorHelper(matches);
-          _context5.p = 1;
-          _iterator.s();
-        case 2:
-          if ((_step = _iterator.n()).done) {
-            _context5.n = 7;
-            break;
+          try {
+            for (_iterator.s(); !(_step = _iterator.n()).done;) {
+              m = _step.value;
+              try {
+                marker = elementToPinData(m);
+                if (!isNaN(marker.x) && !isNaN(marker.y)) {
+                  minerva.data.bioEntities.addSingleMarker(marker);
+                }
+              } catch (err) {
+                console.error("Error highlighting", m, err);
+              }
+            }
+          } catch (err) {
+            _iterator.e(err);
+          } finally {
+            _iterator.f();
           }
-          m = _step.value;
-          _context5.p = 3;
-          _context5.n = 4;
-          return fetchElementDetails(m);
-        case 4:
-          full = _context5.v;
-          marker = elementToPinData(full);
-          minerva.data.bioEntities.addSingleMarker(marker);
-          _context5.n = 6;
-          break;
-        case 5:
-          _context5.p = 5;
-          _t = _context5.v;
-          console.error("Error highlighting", m, _t);
-        case 6:
-          _context5.n = 2;
-          break;
-        case 7:
-          _context5.n = 9;
-          break;
-        case 8:
-          _context5.p = 8;
-          _t2 = _context5.v;
-          _iterator.e(_t2);
-        case 9:
-          _context5.p = 9;
-          _iterator.f();
-          return _context5.f(9);
-        case 10:
-          return _context5.a(2);
+        case 1:
+          return _context3.a(2);
       }
-    }, _callee5, null, [[3, 5], [1, 8, 9, 10]]);
+    }, _callee3);
   }));
   return _highlightMultiple.apply(this, arguments);
 }
 function renderUI(container, sheet, bioEntities) {
   var $el = $(container);
   $el.empty();
+  $el.addClass('ke-plugin-root');
   var header = sheet.values[0];
   var rows = sheet.values.slice(1);
-  var $controls = $("\n    <div class=\"d-flex justify-content-between mb-2\">\n      <input type=\"text\" id=\"search-box\" class=\"form-control form-control-sm w-50\" placeholder=\"Search...\">\n      <div>\n        <button class=\"btn btn-sm btn-primary access-btn\">Access data</button>\n        <button class=\"btn btn-sm btn-secondary clean-btn\">Clean</button>\n      </div>\n    </div>\n  ");
-  var $wrapper = $('<div class="table-wrapper"></div>');
-  var $table = $('<table class="table table-bordered table-sm"></table>');
-  var $thead = $("<thead><tr></tr></thead>");
+  var keNameIdx = header.indexOf(KE_NAME_COLUMN);
+  var entityIndex = buildEntityIndex(bioEntities);
+
+  // nicer layout: Fixed Top Section
+  var $headerSection = $("\n    <div class=\"ke-fixed-top border-bottom bg-light p-2\">\n      <div class=\"input-group input-group-sm mb-2\">\n        <div class=\"input-group-prepend\">\n          <span class=\"input-group-text\"><i class=\"fas fa-search\"></i> Search</span>\n        </div>\n        <input type=\"text\" id=\"search-box\" class=\"form-control\" placeholder=\"Type to filter map...\">\n      </div>\n      <div class=\"d-flex gap-2\">\n        <button class=\"btn btn-sm btn-outline-primary flex-grow-1 access-btn\">\n           Access Data\n        </button>\n        <button class=\"btn btn-sm btn-outline-danger clean-btn\" style=\"margin-left:5px;\">\n           Clean Map\n        </button>\n      </div>\n    </div>\n  ");
+
+  // Scrollable Section
+  var $scrollSection = $('<div class="ke-scroll-content"></div>');
+  var $table = $('<table class="table table-hover table-sm mb-0"></table>');
+  var $thead = $('<thead class="thead-light"><tr></tr></thead>');
   var $tbody = $("<tbody></tbody>");
   header.forEach(function (h) {
     return $thead.find("tr").append("<th>".concat(h, "</th>"));
   });
-  var keNameIdx = header.indexOf(KE_NAME_COLUMN);
-  var entityIndex = buildEntityIndex(bioEntities);
-
-  // Build rows
   rows.forEach(function (row) {
     var $row = $("<tr></tr>");
     row.forEach(function (cell, idx) {
       var value = cell || "";
       if (header[idx].toLowerCase() === "url" && value) {
-        value = "<a href=\"".concat(value, "\" target=\"_blank\" style=\"font-weight: normal;\">").concat(value, "</a>");
+        value = "<a href=\"".concat(value, "\" target=\"_blank\" class=\"btn btn-xs btn-link p-0 text-truncate\" style=\"max-width:100px;\">View</a>");
       }
       $row.append("<td>".concat(value, "</td>"));
     });
@@ -228,12 +195,10 @@ function renderUI(container, sheet, bioEntities) {
       var ke = row[keNameIdx];
       var match = entityIndex[normalizeName(ke)];
       if (match) {
-        $row.css("cursor", "pointer");
-        $row.on("click", /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
+        $row.addClass('clickable-row').on("click", /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
           return _regenerator().w(function (_context) {
             while (1) switch (_context.n) {
               case 0:
-                console.log("Clicked KE:", ke, "-> match:", match);
                 _context.n = 1;
                 return highlightMultiple([match]);
               case 1:
@@ -246,11 +211,11 @@ function renderUI(container, sheet, bioEntities) {
     $tbody.append($row);
   });
   $table.append($thead).append($tbody);
-  $wrapper.append($table);
-  $el.append($controls, $wrapper);
+  $scrollSection.append($table);
+  $el.append($headerSection, $scrollSection);
 
-  // ===== Events =====
-  $(".access-btn").css("font-weight", "normal").on("click", function () {
+  // Events
+  $(".access-btn").on("click", function () {
     return window.open(SPREADSHEET_URL, "_blank");
   });
   $(".clean-btn").on("click", function () {
@@ -258,119 +223,82 @@ function renderUI(container, sheet, bioEntities) {
     $("#search-box").val("");
     $tbody.find("tr").show();
   });
-  $("#search-box").on("input", /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2() {
-    var val, visibleMatches;
-    return _regenerator().w(function (_context2) {
-      while (1) switch (_context2.n) {
-        case 0:
-          val = $(this).val().toLowerCase();
-          $tbody.find("tr").each(function () {
-            var rowText = $(this).text().toLowerCase();
-            $(this).toggle(rowText.includes(val));
-          });
-
-          // highlight only visible rows
-          visibleMatches = [];
-          $tbody.find("tr:visible").each(function () {
-            var rowCells = $(this).find("td");
-            if (keNameIdx !== -1) {
-              var ke = rowCells.eq(keNameIdx).text();
-              var match = entityIndex[normalizeName(ke)];
-              if (match) visibleMatches.push(match);
-            }
-          });
-          _context2.n = 1;
-          return highlightMultiple(visibleMatches);
-        case 1:
-          return _context2.a(2);
+  $("#search-box").on("input", function () {
+    var val = $(this).val().toLowerCase();
+    var visibleMatches = [];
+    $tbody.find("tr").each(function () {
+      var rowText = $(this).text().toLowerCase();
+      var isVisible = rowText.includes(val);
+      $(this).toggle(isVisible);
+      if (isVisible && keNameIdx !== -1) {
+        var keName = $(this).find("td").eq(keNameIdx).text();
+        var match = entityIndex[normalizeName(keName)];
+        if (match) visibleMatches.push(match);
       }
-    }, _callee2, this);
-  })));
+    });
+    highlightMultiple(visibleMatches);
+  });
 
-  // ===== Initial highlight =====
+  // Initial highlight
   var allMatches = [];
   $tbody.find("tr").each(function () {
-    var rowCells = $(this).find("td");
     if (keNameIdx !== -1) {
-      var ke = rowCells.eq(keNameIdx).text();
-      var match = entityIndex[normalizeName(ke)];
+      var keName = $(this).find("td").eq(keNameIdx).text();
+      var match = entityIndex[normalizeName(keName)];
       if (match) allMatches.push(match);
     }
   });
   highlightMultiple(allMatches);
 }
 
-// ===== Main =====
+// Babel-compatible Synchronous registration
 function register() {
-  return _register.apply(this, arguments);
-}
-function _register() {
-  _register = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee6() {
-    var _minerva$plugins$regi, element, _yield$Promise$all, _yield$Promise$all2, sheet, elements, _t3;
-    return _regenerator().w(function (_context6) {
-      while (1) switch (_context6.p = _context6.n) {
-        case 0:
-          console.log("Registering ".concat(PLUGIN_NAME, " plugin"));
-          if (!(!minerva.plugins || !minerva.plugins.registerPlugin)) {
-            _context6.n = 1;
-            break;
-          }
-          alert("Minerva v18 or later required");
-          return _context6.a(2);
-        case 1:
-          _minerva$plugins$regi = minerva.plugins.registerPlugin({
-            pluginName: PLUGIN_NAME,
-            pluginVersion: PLUGIN_VERSION,
-            pluginUrl: PLUGIN_URL
-          }), element = _minerva$plugins$regi.element;
-          _context6.p = 2;
-          _context6.n = 3;
-          return Promise.all([fetchSheetData(), fetch("".concat(minerva.project.data.getApiUrls().baseApiUrl, "/projects/").concat(minerva.project.data.getProjectId(), "/models/*/bioEntities/elements/")).then(function (r) {
-            return r.json();
-          })]);
-        case 3:
-          _yield$Promise$all = _context6.v;
-          _yield$Promise$all2 = _slicedToArray(_yield$Promise$all, 2);
-          sheet = _yield$Promise$all2[0];
-          elements = _yield$Promise$all2[1];
-          renderUI(element, sheet, elements);
-          _context6.n = 5;
-          break;
-        case 4:
-          _context6.p = 4;
-          _t3 = _context6.v;
-          $(element).html("<p style=\"color:red;\">".concat(_t3.message, "</p>"));
-          console.error(_t3);
-        case 5:
-          return _context6.a(2);
-      }
-    }, _callee6, null, [[2, 4]]);
-  }));
-  return _register.apply(this, arguments);
+  if (!minerva.plugins || !minerva.plugins.registerPlugin) return;
+  var pluginData = minerva.plugins.registerPlugin({
+    pluginName: PLUGIN_NAME,
+    pluginVersion: PLUGIN_VERSION,
+    pluginUrl: PLUGIN_URL
+  });
+  var baseUrl = minerva.project.data.getApiUrls().baseApiUrl;
+  var projectId = minerva.project.data.getProjectId();
+  Promise.all([fetchSheetData(), fetch("".concat(baseUrl, "/projects/").concat(projectId, "/models/*/bioEntities/elements/")).then(function (r) {
+    return r.json();
+  })]).then(function (results) {
+    renderUI(pluginData.element, results[0], results[1]);
+  }).catch(function (err) {
+    $(pluginData.element).html("<p style=\"color:red; padding: 10px;\">".concat(err.message, "</p>"));
+  });
 }
 register();
 },{"../css/styles.css":1,"./minervaAPI":3,"core-js/modules/es.array.concat.js":162,"core-js/modules/es.array.find.js":163,"core-js/modules/es.array.from.js":164,"core-js/modules/es.array.includes.js":165,"core-js/modules/es.array.index-of.js":166,"core-js/modules/es.array.iterator.js":167,"core-js/modules/es.array.map.js":168,"core-js/modules/es.array.slice.js":169,"core-js/modules/es.object.get-prototype-of.js":172,"core-js/modules/es.object.to-string.js":173,"core-js/modules/es.promise.js":177,"core-js/modules/es.regexp.exec.js":181,"core-js/modules/es.regexp.to-string.js":182,"core-js/modules/es.string.includes.js":183,"core-js/modules/es.string.iterator.js":184,"core-js/modules/es.string.replace.js":185,"core-js/modules/es.string.trim.js":186,"core-js/modules/es.symbol.description.js":188,"core-js/modules/es.symbol.iterator.js":190,"core-js/modules/es.symbol.js":191,"core-js/modules/web.dom-collections.for-each.js":193,"core-js/modules/web.dom-collections.iterator.js":194,"jquery":195}],3:[function(require,module,exports){
 /**
- * Minerva Plugin API definitions
- *
- * JSDoc typedefs for Minerva API objects (v18+).
+ * Definitions of minerva plugin API.
  */
 
 /**
  * @typedef {Object} MinervaApiUrls
  * @property {string} baseApiUrl
  * @property {string} baseNewApiUrl
+ *
  */
 
 /**
  * @typedef {Object} MinervaProjectData
  * @property {function} getProjectId
  * @property {function():MinervaApiUrls} getApiUrls
+ *
  */
 
 /**
  * @typedef {Object} MinervaProject
- * @property {MinervaProjectData} data
+ * @property {data} MinervaProjectData
+ *
+ */
+
+/**
+ * @typedef {Object} MinervaMap
+ * @property {function({x1:number, y1:number, x2:number, y2:number})} fitBounds
+ * @property {function({id:number})} openMap
  */
 
 /**
@@ -378,6 +306,7 @@ register();
  * @property {string} pluginName
  * @property {string} pluginVersion
  * @property {string} pluginUrl
+ *
  */
 
 /**
@@ -387,24 +316,115 @@ register();
  * @property {function} events.addListener
  * @property {function} events.removeListener
  * @property {function} events.removeAllListeners
+ *
  */
 
 /**
  * @typedef {Object} MinervaPlugin
  * @property {function(MinervaPluginRegisterData):MinervaPluginResultData} registerPlugin
+ *
  */
 
 /**
  * @typedef {Object} MarkerData
- * @property {"pin"|"surface"|"ICON"|"line"} type
- * @property {string} id
- * @property {number} modelId
- * @property {string} [color]
- * @property {number} [opacity]
- * @property {number} [x]
- * @property {number} [y]
+ * @property {"pin"|"surface"} type
+ * @property {string} [id]
+ * @property {string} color
+ * @property {number} opacity
+ * @property {number} x
+ * @property {number} y
  * @property {number} [width]
  * @property {number} [height]
+ * @property {number} [number]
+ * @property {number} [modelId]
+ *
+ */
+
+/**
+ * @typedef {Object} MinervaData
+ * @property {Object} bioEntities
+ * @property {function} bioEntities.removeSingleMarker
+ * @property {function({MarkerData})} bioEntities.addSingleMarker
+ * @property {function} bioEntities.removeAllMarkers
+ *
+ */
+
+/**
+ * @typedef {Object} MinervaAPI
+ * @property {MinervaPlugin} plugins
+ * @property {MinervaProject} project
+ * @property {MinervaMap} map
+ * @property {MinervaData} data
+ */
+
+/**
+ * @typedef {Object} MinervaElement
+ * @property {number} id
+ * @property {number} modelId
+ * @property {number} x
+ * @property {number} y
+ * @property {number} width
+ * @property {number} height
+ */
+
+/**
+ * @typedef {Object} MinervaSegment
+ * @property {number} x1
+ * @property {number} y1
+ * @property {number} x2
+ * @property {number} y2
+ */
+
+/**
+ * @typedef {Object} MinervaReactant
+ * @property {MinervaSegment[]} line.segments
+ */
+/**
+ * @typedef {Object} MinervaOperator
+ * @property {MinervaSegment[]} line.segments
+ */
+/**
+ * @typedef {Object} MinervaModifier
+ * @property {MinervaSegment[]} line.segments
+ */
+/**
+ * @typedef {Object} MinervaProduct
+ * @property {MinervaSegment[]} line.segments
+ */
+
+/**
+ * @typedef {Object} MinervaReaction
+ * @property {number} id
+ * @property {number} modelId
+ * @property {string} idReaction
+ * @property {MinervaSegment[]} line.segments
+ * @property {MinervaOperator[]} operators
+ * @property {MinervaReactant[]} reactants
+ * @property {MinervaProduct[]} products
+ * @property {MinervaModifier[]} modifiers
+ *
+ */
+
+/**
+ * @typedef {Object} MinervaElementId
+ * @property {number} id
+ * @property {number} modelId
+ * @property {("ALIAS"|"REACTION")} type
+ */
+
+/**
+ * @typedef {Object} MinervaSearchResult
+ * @property {Object} bioEntity
+ * @property {boolean} perfect
+ *
+ */
+
+/**
+ * @typedef {Object} MinervaSearchListenerData
+ * @property {("bioEntity"|"drugs"|"chemicals")} type
+ * @property {Object[]} searchValues
+ * @property {MinervaSearchResult[]} results
+ *
  */
 "use strict";
 },{}],4:[function(require,module,exports){
