@@ -1,59 +1,102 @@
-/**
- * KE Methods Mapper Plugin styles
- * Author: Luiz Ladeira
- */
+$badass: #bada55;
+$pluginName: starter-kit;
 
-body {
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-.table-wrapper {
-  width: 100%;
+.#{$pluginName}-container {
+  padding: 10px;
+  background-color: $badass;
+  font-size: .8rem;
   height: 100%;
-  max-height: 500px;
+  overflow: auto;
+}
+
+.btn-uniprot, .btn-pick-random, .btn-minerva {
+  margin-bottom: 5px;
+}
+
+.#{$pluginName}-container .card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-radius: .25rem
+}
+
+.#{$pluginName}-container .card-header:first-child {
+  border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0
+}
+
+.#{$pluginName}-container .card-header {
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, .03);
+  border-bottom: 1px solid rgba(0, 0, 0, .125)
+}
+
+.#{$pluginName}-container .card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+.#{$pluginName}-container .btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+.#{$pluginName}-container .btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff
+}
+
+.#{$pluginName}-container .btn-primary:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc
+}
+
+.#{$pluginName}-container .btn-block {
+  display: block;
+  width: 100%
+}
+
+.#{$pluginName}-container .btn-block + .btn-block {
+  margin-top: .5rem
+}
+
+.#{$pluginName}-container hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, .1)
+}
+
+
+.#{$pluginName}-container .h4,
+.#{$pluginName}-container h4 {
+  font-size: 1.5rem;
+}
+
+.#{$pluginName}-container pre {
   overflow-x: auto;
-  overflow-y: auto;
-  border: 1px solid #ddd;
-  background: #fff;
-  padding: 5px;
-}
-
-.table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.table th,
-.table td {
-  white-space: nowrap;
-  padding: 6px 10px;
-  border: 1px solid #ccc;
-  text-align: left;
-}
-
-.table th {
-  background: #f8f9fa;
-  position: sticky;
-  top: 0;
-  z-index: 2;
-}
-
-.table tr:hover {
-  background: #f1f1f1;
-}
-
-.d-flex {
-  margin-bottom: 8px;
-}
-
-.access-btn {
-  background-color: #007bff !important;
-  color: white !important;
-  font-weight: normal !important;
-}
-
-.clean-btn {
-  margin-left: 5px;
 }
