@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.1 (2026-11-19)
+
+- Licence and references aligned with the DNT-IVB mapping plugin: code under MIT, Copyright (c) 2026 Luiz Ladeira; the dataset in the Google Sheet under CC BY 4.0; same reference list. Author line: Luiz Ladeira, with Hesam Korki's earlier work credited. No change in behaviour.
+
 ## 1.3.0 (2026-11-19)
 
 Security, MINERVA 22 and layout corrections, aligned with the KE Methods Mapper 1.8.1 and DNT-IVB mapping 0.5.1 plugins.

@@ -1,10 +1,10 @@
 # Nephrotox KE Mapper
 
-MINERVA plugin, version 1.3.0. It loads a Google Sheet listing the key events (KE) of the nephrotoxicity AOP network (from AOP-Wiki) and tags the corresponding elements of the AOP_Nephrotoxicity map.
+MINERVA plugin, version 1.3.1. It loads a Google Sheet listing the key events (KE) of the nephrotoxicity AOP network (from AOP-Wiki) and tags the corresponding elements of the AOP_Nephrotoxicity map.
 
 Load URL: <https://raw.githubusercontent.com/ontox-maps/minerva_plugins/main/Nephrotox_KE_Mapper/plugin.js>
 
-## Features
+# Features
 
 Same layout and features as the DNT-IVB mapping and KE Methods Mapper plugins, with the DNT-IVB mapping palette (accent `#2563eb`, stripe `#f1f5f9`, hover `#e8f0fe`, selected `#dbe7ff`, map pin `#d6336c`):
 
@@ -16,7 +16,7 @@ Same layout and features as the DNT-IVB mapping and KE Methods Mapper plugins, w
 -   Row click tags the element(s), opens the submap and zooms to them; search and filters update the tags.
 -   "Access data" opens the Google Sheet; "Clean" resets search and filters and removes the plugin's tags.
 
-## Configuration
+# Configuration
 
 -   **Google Sheet**: `1QA4EHdprLo3JCTRzE2U6E3DwBj-wYiwLTN-gc2eI7Hs`, tab `Data`, first row = column names. The sheet must be shared
     as "anyone with the link can view".
@@ -27,7 +27,7 @@ Same layout and features as the DNT-IVB mapping and KE Methods Mapper plugins, w
 -   **Always-visible columns**: `Entity`, `Event_type`, `Biological_organization_level`; the
     other columns open in a per-row detail panel.
 
-## MINERVA compatibility
+# MINERVA compatibility
 
 Written for the MINERVA 21.0.7 and 22.0.4 plugin APIs. Map elements are read with
 `minerva.elements.data.getAll()` on MINERVA 22, otherwise from MINERVA's new API per map
@@ -35,7 +35,7 @@ Written for the MINERVA 21.0.7 and 22.0.4 plugin APIs. Map elements are read wit
 `.../bioEntities/elements/` on 21). The deprecated `api/.../models/*/bioEntities/elements/`
 endpoint is not used. With no project open, no request is made.
 
-## Building
+# Building
 
 ```
 npm ci
@@ -50,26 +50,44 @@ is exactly the URL it is loaded from. To host a build elsewhere:
 PLUGIN_URL=https://example.org/plugin.js npm run build
 ```
 
-## Licencing
+# Versioning
 
--   **Code (MIT)**: source code, build configuration and the built `plugin.js` are released under the
-    MIT License, Copyright (c) 2026 Luiz Ladeira (see `LICENSE`).
--   **Data (CC BY 4.0)**: the nephrotoxicity key-event list is not stored in this repository; it is read at runtime from the
-    public Google Sheet <https://docs.google.com/spreadsheets/d/1QA4EHdprLo3JCTRzE2U6E3DwBj-wYiwLTN-gc2eI7Hs> and is made available
-    under the Creative Commons Attribution 4.0 International licence
-    (<https://creativecommons.org/licenses/by/4.0/>). Cited sources remain subject to their own terms.
+-   **Plugin name**: Nephrotox KE Mapper
 
-## Credits
+-   **Version**: 1.3.1 (see `CHANGELOG.md`)
 
--   Authors: Luiz Ladeira, Hesam Korki (<https://github.com/HesamKorki/serving-purposes>).
--   Layout shared with the DNT-IVB mapping plugin
-    (<https://github.com/luiz-ladeira/DNT-IVB_mapping_minerva_plugin>) and the KE Methods Mapper
-    plugin (<https://github.com/luiz-ladeira/cardiotox_aop_minerva_plugin>); the compact
-    expandable-row layout is adapted from the MINERVA Adverse Drug Reactions (`drug-reactions`)
-    plugin (<https://gitlab.com/uniluxembourg/lcsb/BioCore/minerva/plugins/drug-reactions>).
+-   **Author**: Luiz Ladeira
 
-## References
+-   Repository: <https://github.com/ontox-maps/minerva_plugins/tree/main/Nephrotox_KE_Mapper>
 
--   Hoksza D, Gawron P, Ostaszewski M, Smula E, Schneider R. MINERVA API and plugins: opening molecular
-    network analysis and visualization to the community. Bioinformatics, 2019;35(21):4496-4498.
-    <https://doi.org/10.1093/bioinformatics/btz286>
+-   Built on the Cardiotox AOP / KE Methods Mapper plugin, itself based on previous
+    development by Hesam Korki - <https://github.com/HesamKorki>, and shares its layout with
+    the DNT-IVB mapping plugin - <https://github.com/ontox-maps/minerva_plugins/tree/main/DNT_IVB_Mapping>
+
+-   The compact expandable-row layout (narrow primary columns with the
+    remaining fields in a per-row detail panel, to save horizontal space) is
+    adapted from the MINERVA **Adverse Drug Reactions** (`drug-reactions`)
+    plugin -
+    <https://gitlab.com/uniluxembourg/lcsb/BioCore/minerva/plugins/drug-reactions>
+
+------------------------------------------------------------------------
+
+# Licencing
+
+This project is dual-licensed:
+
+-   **Code (MIT)**: all source code, build configuration and the built `plugin.js` in this
+    repository are released under the MIT License, Copyright (c) 2026 Luiz Ladeira (see
+    `LICENSE`).
+-   **Data (CC BY 4.0)**: the nephrotoxicity key-event dataset displayed by the plugin is not stored in
+    this repository; it is read at runtime from the public Google Sheet
+    <https://docs.google.com/spreadsheets/d/1QA4EHdprLo3JCTRzE2U6E3DwBj-wYiwLTN-gc2eI7Hs>
+    and is made available under the Creative Commons Attribution 4.0 International licence
+    (<https://creativecommons.org/licenses/by/4.0/>). The AOP-Wiki entries linked from the dataset remain subject to AOP-Wiki's terms.
+
+------------------------------------------------------------------------
+
+# References
+
+-   [MINERVA API documentation](https://minerva.pages.uni.lu/doc/)
+-   [Google Visualization API query language (gviz)](https://developers.google.com/chart/interactive/docs/querylanguage)

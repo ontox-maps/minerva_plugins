@@ -48,14 +48,15 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
 /**
  * Nephrotox KE Mapper plugin for MINERVA (plugin API v18+; written for the
  * MINERVA 21.0.7 and 22.0.4 plugin APIs).
- * Authors: Luiz Ladeira, Hesam Korki. License: MIT (see LICENSE).
+ * Author: Luiz Ladeira. License: MIT (see LICENSE).
  *
  * Loads a public Google Sheet (key events of the nephrotoxicity aop network (aop-wiki)), renders a searchable,
  * filterable table, and tags the matching elements of the displayed MINERVA
  * map; clicking a row focuses its element(s).
  *
- * Layout and features are shared with the DNT-IVB mapping and KE Methods
- * Mapper plugins; the compact expandable-row layout is adapted from the
+ * Built on the KE Methods Mapper (cardiotox) plugin, itself based on previous
+ * development by Hesam Korki (https://github.com/HesamKorki); layout shared with
+ * the DNT-IVB mapping plugin; the compact expandable-row layout is adapted from the
  * MINERVA Adverse Drug Reactions (drug-reactions) plugin
  * (https://gitlab.com/uniluxembourg/lcsb/BioCore/minerva/plugins/drug-reactions).
  */
@@ -18372,7 +18373,7 @@ process.umask = function() { return 0; };
 },{}],220:[function(require,module,exports){
 module.exports={
   "name": "nephrotox-ke-mapper",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "MINERVA plugin: Key events of the nephrotoxicity AOP network (AOP-Wiki) mapped to the elements of the displayed map",
   "author": "Luiz Ladeira",
   "license": "MIT",
