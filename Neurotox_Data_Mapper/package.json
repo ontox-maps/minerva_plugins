@@ -1,0 +1,50 @@
+{
+  "name": "neurotox-data-mapper",
+  "version": "1.3.0",
+  "description": "MINERVA plugin: Disease evidence on oligodendrocyte development entities mapped to the elements of the displayed map",
+  "author": "Luiz Ladeira",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ontox-maps/minerva_plugins.git",
+    "directory": "Neurotox_Data_Mapper"
+  },
+  "homepage": "https://github.com/ontox-maps/minerva_plugins/tree/main/Neurotox_Data_Mapper#readme",
+  "bugs": {
+    "url": "https://github.com/ontox-maps/minerva_plugins/issues"
+  },
+  "keywords": [
+    "minerva",
+    "minerva-plugin",
+    "ontox"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "babel": "babel src -d __tmp_minerva_plugin -D",
+    "clean-babel": "rimraf __tmp_minerva_plugin",
+    "build-css": "sass --no-source-map src/css/styles.scss src/css/styles.css",
+    "build": "mkdirp dist && npm run build-css && npm run babel && browserify -t browserify-css -t envify __tmp_minerva_plugin/js/index.js > dist/plugin.js && npm run clean-babel",
+    "clean": "rimraf dist src/css/styles.css && npm run clean-babel"
+  },
+  "browserify-css": {
+    "autoInject": false
+  },
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "core-js": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "browserify": "^17.0.1",
+    "browserify-css": "^0.15.0",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^5.0.10",
+    "sass": "^1.80.6",
+    "envify": "^4.1.0"
+  }
+}
